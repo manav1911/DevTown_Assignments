@@ -58,7 +58,7 @@ const game = (option) => {
             default:
                 break
         }
-        break;
+        break
         case 1:
         switch (computerResponse) {
             case 0:
@@ -84,7 +84,7 @@ const game = (option) => {
             default:
                 break
         }
-        break;
+        break
         case 2:
         switch (computerResponse) {
             case 0:
