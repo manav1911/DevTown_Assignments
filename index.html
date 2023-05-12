@@ -2,39 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors</title>
+    <script defer src="./script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="">
     <div class="game">
         <header>
-            <h1>Rock Paper Scissor</h1>
+            <h1 class="Main-heaing" style="color: white;">Rock-Paper Scissors Game</h1>
         </header>
-    
+        
         <div class="scoreboard">
-            <div class="player"></div>
-            <div class="computer"></div>
+            <div id="player">
+                <h1 class="text-3xl text-white">
+                    0
+                </h1>
+                <div class="text-lg text-white">Player</div>
+            </div>
+            <div class="partition"></div>
+            <div id="computer">
+                <h1 class="text-3xl text-white">
+                    0
+                </h1>
+                <div class="text-lg text-white">Computer</div>
+            </div>
         </div>
-    
-        <div class="text">
-            <!-- Text to display the result -->
+
+        <div id="message-box" class=" my-5" >
+            <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl" style="color: white;">Rock beats scissor you win</h1>
         </div>
 
         <div class="options">
             <div id="rock" class="option">
-                <img src="https://www.svgrepo.com/show/323925/rock.svg" alt="Rock">
+                <img src="https://www.svgrepo.com/show/323925/rock.svg" alt="rock">
             </div>
             <div id="paper" class="option">
-                <img src="https://www.svgrepo.com/show/479042/palm.svg" alt="Paper">
+                <img src="https://www.svgrepo.com/show/479042/palm.svg" alt="paper">
             </div>
             <div id="scissors" class="option">
-                <img src="https://www.svgrepo.com/show/510293/two-fingers.svg" alt="Scissors">
+                <img src="https://www.svgrepo.com/show/510293/two-fingers.svg" alt="scissors">
             </div>
         </div>
+
     </div>
 </body>
 

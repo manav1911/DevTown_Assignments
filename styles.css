@@ -4,28 +4,108 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(41, 59, 75);
+body {    
+    background-color: hsla(228, 75%, 16%, 1);
 }
 
 div.game{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
+    height: 500px;
+}
+
+div.game header{
+    padding-top: 0px;
+    font-size: xx-large;
+    height: 50px;
+    width: 100vh;
+    text-align: center;
+    justify-content: center;
+    background-color: #01579b;
 }
 
 div.options{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    transition: 0.5s ease-in-out;
 }
 
 div.options .option{
     width: 100px;
-    background-color: red;
+    background-color:cyan;
+    margin: 0px 30px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+div.options .option#scissors{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+div.options .option:hover{
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 div.options .option img {
     width: 100%;
+}
+
+div.scoreboard{
+    width: 150px;
+    height: 80px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+#player, #computer{
+    position: relative;
+}
+
+#player div{
+    position: absolute;
+    height: 30px;
+    width: 93px;
+    background-color: #03a9f4;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    left: -100px;
+    top: 5px;
+    padding: 0px 10px;
+}
+
+#computer div{
+    position: absolute;
+    height: 30px;
+    width: 93px;
+    background-color: #03a9f4;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    top: 5px;
+    right: -100px;
+    padding: 0px 10px;
+}
+
+div.partition{
+    width: 5px;
+    height: 100%;
+    background-color:   hsla(228, 75%, 16%, 1);
+}
+
+.win{
+    border: 5px solid lime !important;
+}
+
+.lose{
+    border: 5px solid red !important;
 }
