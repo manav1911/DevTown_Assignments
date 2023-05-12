@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(41, 59, 75);
+}
+
+div.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div.options .option{
+    width: 100px;
+    background-color: red;
+}
+
+div.options .option img {
+    width: 100%;
+}
