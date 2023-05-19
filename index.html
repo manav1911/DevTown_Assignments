@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClimaFury</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="//unpkg.com/alpinejs"></script>
+    <script defer src="script.js"></script>
+    <style>
+        header{
+            background-color: gainsboro;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl pt-5 pl-5 dark:text-white">Clima<mark class="px-2 text-white bg-sky-400 rounded dark:bg-blue-500">Fury</mark></h1>
+                </div>
+            </div>
+            <div class="container mx-auto px-6 py-16 pt-8 text-center">
+                <div class="mx-auto max-w-lg">
+                    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better Data</span> Better Weather</h1>
+                    <div class="max-w-2xl mx-auto pt-5">
+                        <form id="search-location">
+                            <div class="relative">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </div>
+                                <input type="search" id="default-search" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search location" required />
+                                <button type="click" class="detect-loc absolute right-[5rem] bottom-1.5 px-4 py-2 group">
+                                    <svg width="30px" height="30px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg" stroke="#858080" class="icon icon-tabler icon-tabler-current-location" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <circle cx="12" cy="12" r="3" /> <circle cx="12" cy="12" r="8" /> <line x1="12" y1="2" x2="12" y2="4" /> <line x1="12" y1="20" x2="12" y2="22" /> <line x1="20" y1="12" x2="22" y2="12" /> <line x1="2" y1="12" x2="4" y2="12" />
+                                        
+                                        <span class="opacity-0 group-hover:opacity-100 absolute top-0 left-0 bg-white text-black px-4 py-2 mt-10 rounded shadow-lg">
+                                            Current location
+                                        </span>
+                                    </svg>
+                                </button>
+
+                                <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg">
+                                    Search
+                                </button>
+                            </div>
+                        </form>
+
+                        <p class="mt-5 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+                            Never hesitate to plan your day,<br>
+                            Get your weather report here.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mx-auto mt-20 max-w-screen-xl weather-card"></div>
+            </div>
+        </header>
+    </main>
+</body>
+
+</html>
